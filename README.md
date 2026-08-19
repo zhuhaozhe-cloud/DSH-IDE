@@ -12,6 +12,55 @@
 
 ---
 
+## ⚡ 快速安装 / Quick Installation
+
+### 方法一：npm 全局安装（推荐） / Method 1: npm Global Install (Recommended)
+
+```bash
+# 安装插件 / Install plugin
+npm install -g dsh-ide-mode
+
+# 启动 DSH IDE / Start DSH IDE
+dsh ide
+
+# 访问界面 / Access interface
+# 浏览器会自动打开 http://localhost:3000/ide
+# Browser will automatically open http://localhost:3000/ide
+```
+
+### 方法二：本地项目安装 / Method 2: Local Project Install
+
+```bash
+# 进入项目目录 / Enter project directory
+cd your-project
+
+# 安装插件 / Install plugin
+npm install dsh-ide-mode
+
+# 启动 DSH / Start DSH
+dsh start --plugin dsh-ide-mode
+```
+
+### 方法三：一键安装脚本 / Method 3: One-Click Install Script
+
+```bash
+# Linux/macOS
+chmod +x install.sh
+./install.sh
+
+# Windows
+双击运行 install.bat
+# 或者 PowerShell
+.\install.ps1
+```
+
+**详细安装指南**：[PLUGIN-INSTALL-GUIDE.md](PLUGIN-INSTALL-GUIDE.md)  
+**快速安装指南**：[QUICK-INSTALL.md](QUICK-INSTALL.md)
+
+---
+
+
+
 ## English
 
 ### Introduction
@@ -304,3 +353,144 @@ DSH-IDE/
 2. 完善前端功能优化
 3. 建立测试框架
 4. 完善项目文档
+
+## 📦 插件安装 / Plugin Installation
+
+### 快速安装 / Quick Install
+
+```bash
+# 全局安装 / Global install
+npm install -g dsh-ide-mode
+
+# 启动 / Start
+dsh ide
+```
+
+### 详细安装指南 / Detailed Installation Guide
+
+- [插件安装指南 / Plugin Installation Guide](PLUGIN-INSTALL-GUIDE.md)
+- [快速安装指南 / Quick Installation Guide](QUICK-INSTALL.md)
+- [一键安装脚本 / One-Click Install Scripts](install.sh)
+
+### 安装脚本 / Install Scripts
+
+- **Linux/macOS**: `./install.sh`
+- **Windows**: `install.bat`
+- **PowerShell**: `./install.ps1`
+
+## 🎯 使用方法 / Usage
+
+### 基本操作 / Basic Operations
+
+1. **启动 DSH IDE**：`dsh ide`
+2. **访问界面**：`http://localhost:3000/ide`
+3. **打开文件**：`Ctrl+P`
+4. **命令面板**：`Ctrl+Shift+P`
+5. **保存文件**：`Ctrl+S`
+
+### 快捷键 / Keyboard Shortcuts
+
+| 功能 / Function | 快捷键 / Shortcut |
+|----------------|-------------------|
+| 命令面板 / Command Palette | Ctrl+Shift+P |
+| 快速打开 / Quick Open | Ctrl+P |
+| 保存文件 / Save File | Ctrl+S |
+| 新建文件 / New File | Ctrl+N |
+| 关闭标签 / Close Tab | Ctrl+W |
+| 切换终端 / Toggle Terminal | Ctrl+` |
+
+## 🔧 配置 / Configuration
+
+### 基本配置 / Basic Configuration
+
+创建配置文件 `~/.dsh/config.json`：
+
+```json
+{
+  "plugins": {
+    "dsh-ide-mode": {
+      "enabled": true,
+      "config": {
+        "theme": "dark",
+        "fontSize": 14,
+        "tabSize": 2
+      }
+    }
+  }
+}
+```
+
+### 配置选项 / Configuration Options
+
+- `theme`: 主题 (dark/light)
+- `fontSize`: 字体大小
+- `tabSize`: Tab 大小
+- `wordWrap`: 自动换行
+- `minimap`: 显示小地图
+- `terminal`: 启用终端
+
+## 🛠️ 故障排除 / Troubleshooting
+
+### 常见问题 / Common Issues
+
+#### Q: 插件无法加载？
+```bash
+# 检查安装 / Check installation
+npm list -g dsh-ide-mode
+
+# 重新安装 / Reinstall
+npm uninstall -g dsh-ide-mode
+npm install -g dsh-ide-mode
+```
+
+#### Q: 端口被占用？
+```bash
+# 更改端口 / Change port
+dsh config set port 3001
+```
+
+#### Q: 如何更新插件？
+```bash
+npm update -g dsh-ide-mode
+```
+
+## 📚 文档 / Documentation
+
+- [README.md](README.md) - 项目介绍 / Project Introduction
+- [PLUGIN-INSTALL-GUIDE.md](PLUGIN-INSTALL-GUIDE.md) - 插件安装指南 / Plugin Installation Guide
+- [QUICK-INSTALL.md](QUICK-INSTALL.md) - 快速安装指南 / Quick Installation Guide
+- [CONTRIBUTING.md](CONTRIBUTING.md) - 贡献指南 / Contributing Guide
+- [GITHUB-SETUP.md](GITHUB-SETUP.md) - GitHub 设置 / GitHub Setup
+- [PROMOTION-STRATEGY.md](PROMOTION-STRATEGY.md) - 推广策略 / Promotion Strategy
+- [FINAL-RELEASE-GUIDE.md](FINAL-RELEASE-GUIDE.md) - 最终发布指南 / Final Release Guide
+
+## 🤝 参与贡献 / Contributing
+
+1. Fork 项目
+2. 创建功能分支
+3. 提交 Pull Request
+4. 参与代码审查
+
+## 📞 获取帮助 / Get Help
+
+- **GitHub Issues**: https://github.com/username/DSH-IDE/issues
+- **GitHub Discussions**: https://github.com/username/DSH-IDE/discussions
+- **文档**: https://github.com/username/DSH-IDE/wiki
+
+## 🎯 项目愿景 / Project Vision
+
+**DSH-IDE 的目标是成为最受欢迎的 Web IDE 项目之一，为开发者提供现代化、专业化的编程环境，推动 Web 技术在开发工具领域的应用。**
+
+通过开源协作、技术创新和社区建设，DSH-IDE 将：
+1. **降低开发门槛**：让更多开发者使用专业 IDE
+2. **推动技术发展**：探索 Web 技术在开发工具中的应用
+3. **建设开源社区**：形成活跃的开发者生态
+4. **创造商业价值**：探索可持续的商业模式
+
+---
+
+**DSH-IDE - 将 DSH Web GUI 改造为类 VS Code 的编程 IDE**
+
+*让编程更简单，让开发更高效*
+
+🚀 **立即安装，开始您的现代化编程体验！**
