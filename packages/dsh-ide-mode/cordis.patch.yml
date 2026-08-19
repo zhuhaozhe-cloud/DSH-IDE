@@ -1,0 +1,6 @@
+# dsh-ide-mode bundle patch: registers the IDE plugin into the web profile.
+# The host half (exports ".") runs system-prompt announcement in the Node process;
+# the browser half (exports "./client") mounts the full IDE view in the web GUI.
+- insert:
+    - id: ide-mode
+      name: '@dsh-ide/dsh-ide-mode'
